@@ -1,7 +1,11 @@
-.header {
+header {
     background-color: red;
 }
 
 .slider {
     background-color: yellow;
+}
+
+footer {
+    background-color: green;
 }
