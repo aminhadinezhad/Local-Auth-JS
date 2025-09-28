@@ -1,30 +1,41 @@
 .form-container {
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
   margin-top: 50px;
 }
 
-.form-login {
+.form-login,
+.form-signup {
   background-color: #ddd;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   max-width: 200px;
   padding: 20px;
+  border-radius: 5px;
   gap: 10px;
   justify-self: center;
 }
 
-.input-login {
+.form-signup {
+  background-color: #bbb;
+}
+
+.input-login,
+.input-signup {
   border: none;
   padding: 5px;
 }
 
-.input-login:focus {
+.input-login:focus,
+.input-signup:focus {
   outline: none;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.07);
 }
 
-.btn-login {
+.btn-login,
+.btn-signup {
   border: none;
   background-color: #555;
   color: white;
@@ -34,10 +45,18 @@
   transition: 0.2s;
 }
 
-.btn-login:hover {
+.btn-login:hover,
+.btn-signup:hover {
   background-color: #777;
 }
 
 input::placeholder {
   color: #888;
+}
+
+.form-title {
+  color: #555;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
 }

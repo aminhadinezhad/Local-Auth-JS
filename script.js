@@ -1,25 +1,48 @@
-const userName = document.getElementById("user");
-const userPass = document.getElementById("password");
+const userName = document.getElementById("user-login");
+const userPass = document.getElementById("password-login");
 const btnLogin = document.querySelector(".btn-login");
-
-console.log(userName);
-console.log(userPass);
+const setUserName = document.getElementById("user-signup");
+const setUserPass = document.getElementById("password-signup");
+const btnSignUp = document.querySelector(".btn-signup");
 
 const user = {
-  user: "amin_hn",
-  password: 123456000000,
+  userName: "",
+  password: "",
 
-  login: function (user, password) {
-    if (password === this.password && user === this.user) {
-      return "User logged in successfully";
+  login: function (user, pass) {
+    if (pass === this.password && user === this.userName) {
+      return "✅ User logged in successfully";
     } else {
       return "❌ Login failed: invalid username or password";
     }
   },
 };
+console.log(user);
+
+const users = [user];
+
+btnSignUp.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // set user name and password
+  user.userName = setUserName.value;
+  user.password = setUserPass.value;
+
+  // show user info
+  console.log(user);
+
+  // clear login form inputs
+  setUserName.value = "";
+  setUserPass.value = "";
+});
 
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
 
-  console.log(user.login(userName.value, Number(userPass.value)));
+  // show login result
+  console.log(user.login(userName.value, userPass.value));
+
+  // clear login form inputs
+  userName.value = "";
+  userPass.value = "";
 });
