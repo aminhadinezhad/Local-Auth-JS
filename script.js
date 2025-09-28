@@ -24,6 +24,7 @@ const users = [user];
 btnSignUp.addEventListener("click", function (e) {
   e.preventDefault();
 
+  console.log(setUserName.value, setUserPass.value);
   // set user name and password
   user.userName = setUserName.value;
   user.password = setUserPass.value;
@@ -39,6 +40,7 @@ btnSignUp.addEventListener("click", function (e) {
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
 
+  console.log(userName.value, userPass.value);
   // show login result
   console.log(user.login(userName.value, userPass.value));
 
