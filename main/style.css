@@ -1,18 +1,90 @@
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("./fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-family: 'Vazirmatn';
+  src: url('./fonts/Vazirmatn-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Vazirmatn";
-  src: url("./fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-family: 'Vazirmatn';
+  src: url('./fonts/Vazirmatn-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
-body {
-  font-family: "Vazirmatn", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  /* 1rem = 10px; */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #444;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 3rem 0;
+}
+
+.user-auth {
+  display: inline-block;
+}
+
+.user-auth-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.90_ em 1.8rem;
+  text-decoration: none;
+  background-color: #eee;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-auth-link:link,
+.user-auth-link:visited {
+  color: inherit;
+}
+
+.auth-link-text {
+  font-size: 1.4rem;
+}
+
+.auth-link-icon svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #444;
+}
+
+.fill {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+
+  /* 💡 ویژگی‌های CSS لازم برای شروع */
+  transform: scale(0); /* شروع از اندازه صفر */
+  transform-origin: center; /* بزرگ شدن از مرکز */
+  pointer-events: none; /* عدم تداخل با کلیک */
+
+  transition: transform 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 300ms linear;
+  z-index: 0;
+}
