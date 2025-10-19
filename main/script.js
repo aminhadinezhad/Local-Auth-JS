@@ -1,58 +1,88 @@
 'use strict';
 
-(function () {
+// (function () {
   const link = document.querySelector('.user-auth-link');
-  let fillEl = null;
-  const fillScale = 18;
-  const radius = 9;
+//   let fillEl = null;
 
-  function removeFill() {
-    if (!fillEl) return;
+//   const initialRadius = 10;
 
-    const elToRemove = fillEl;
-    fillEl = null;
+//   function getFurthestDistance(x, y, w, h) {
+//     const dist1 = Math.sqrt(x * x + y * y);
+//     const dist2 = Math.sqrt((w - x) * (w - x) + y * y);
+//     const dist3 = Math.sqrt(x * x + (h - y) * (h - y));
+//     const dist4 = Math.sqrt((w - x) * (w - x) + (h - y) * (h - y));
 
-    elToRemove.style.opacity = '0';
-  }
+//     return Math.max(dist1, dist2, dist3, dist4);
+//   }
 
-  function onPointerUpOrCancelOrLeave() {
-    removeFill();
-  }
+//   function removeFill() {
+//     if (!fillEl) return;
 
-  function onPointerDown(e) {
-    if (fillEl) {
-      removeFill();
-    }
+//     const elToRemove = fillEl;
+//     fillEl = null;
 
-    fillEl = document.createElement('span');
-    fillEl.className = 'fill';
+//     elToRemove.style.opacity = '0';
 
-    const rect = link.getBoundingClientRect();
+//     const onTransitionEnd = e => {
+//       if (e.propertyName === 'opacity' && elToRemove.parentNode) {
+//         elToRemove.parentNode.removeChild(elToRemove);
+//       }
+//     };
+//     elToRemove.addEventListener('transitionend', onTransitionEnd, {
+//       once: true,
+//     });
+//   }
 
-    const clickX = e.clientX - rect.left;
-    const clickY = e.clientY - rect.top;
+//   function onPointerUpOrCancelOrLeave() {
+//     removeFill();
+//   }
 
-    fillEl.style.left = clickX - radius + 'px';
-    fillEl.style.top = clickY - radius + 'px';
+//   function onPointerDown(e) {
+//     e.preventDefault();
 
-    link.appendChild(fillEl);
+//     if (fillEl) {
+//       removeFill();
+//     }
 
-    requestAnimationFrame(() => {
-      if (fillEl) {
-        fillEl.style.transform = `scale(${fillScale})`;
-      }
-    });
+//     fillEl = document.createElement('span');
+//     fillEl.className = 'fill';
 
-    window.addEventListener('pointerup', onPointerUpOrCancelOrLeave, {
-      once: true,
-    });
-    link.addEventListener('pointerleave', onPointerUpOrCancelOrLeave, {
-      once: true,
-    });
-    link.addEventListener('pointercancel', onPointerUpOrCancelOrLeave, {
-      once: true,
-    });
-  }
+//     const rect = link.getBoundingClientRect();
 
-  link.addEventListener('pointerdown', onPointerDown);
-})();
+//     const clickX = e.clientX - rect.left;
+//     const clickY = e.clientY - rect.top;
+
+//     const furthestDistance = getFurthestDistance(
+//       clickX,
+//       clickY,
+//       rect.width,
+//       rect.height
+//     );
+
+//     const requiredScale = (furthestDistance / initialRadius) * 3.5;
+
+//     fillEl.style.left = clickX - initialRadius + 'px';
+//     fillEl.style.top = clickY - initialRadius + 'px';
+
+//     link.appendChild(fillEl);
+
+//     requestAnimationFrame(() => {
+//       if (fillEl) {
+//         fillEl.style.transform = `scale(${requiredScale})`;
+//       }
+//     });
+
+//     window.addEventListener('pointerup', onPointerUpOrCancelOrLeave, {
+//       once: true,
+//     });
+//     link.addEventListener('pointerleave', onPointerUpOrCancelOrLeave, {
+//       once: true,
+//     });
+//     link.addEventListener('pointercancel', onPointerUpOrCancelOrLeave, {
+//       once: true,
+//     });
+//   }
+
+//   link.addEventListener('pointerdown', onPointerDown);
+// })();
+
