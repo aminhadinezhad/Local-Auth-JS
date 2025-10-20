@@ -1,44 +1,9 @@
-@font-face {
-  font-family: 'Vazirmatn';
-  src: url('./fonts/Vazirmatn-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Vazirmatn';
-  src: url('./fonts/Vazirmatn-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* 1rem = 10px; */
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Vazirmatn', sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #444;
-}
-
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
+.header {
+  padding: 5rem 0;
 }
 
 .nav {
-  padding: 3rem 0;
+  text-align: center;
 }
 
 .user-auth {
