@@ -18,42 +18,72 @@
                 نام کاربری و رمز عبور خود را وارد کنید!
               </p>
             </div>
-            <form action="/login" method="POST" class="login-form__form">
+            <form action="/src/" method="GET" class="login-form__form">
               <div class="login-form__group">
-                <div class="login-form__label">
-                  <label for="username-input" class="">نام کاربری</label>
-                  <span class="required">*</span>
+                <div class="login-form__box">
+                  <div class="login-form__label">
+                    <label for="username-input" class="">نام کاربری</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="username-input"
+                    name="username"
+                    required
+                    class="login-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
                 </div>
-                <input
-                  type="text"
-                  id="username-input"
-                  name="username"
-                  required
-                  class="login-form__input"
-                />
+                <p class="warning-message">فیلد نام کاربری الزامی است.</p>
               </div>
 
               <div class="login-form__group">
-                <div class="login-form__label">
-                  <label for="password-input" class="">رمز عبور</label>
-                  <span class="required">*</span>
+                <div class="login-form__box">
+                  <div class="login-form__label">
+                    <label for="password-input" class="">رمز عبور</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="password"
+                    id="password-input"
+                    name="password"
+                    required
+                    class="login-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
                 </div>
-                <input
-                  type="password"
-                  id="password-input"
-                  name="password"
-                  required
-                  class="login-form__input"
-                />
+                <p class="warning-message">فیلد گذرواژه الزامی است.</p>
               </div>
             </form>
 
-            <a href="" class="login-form__forgot-link"
+            <a href="#" class="login-form__forgot-link"
               >رمز عبور خود را فراموش کرده اید؟</a
             >
             <div class="login-form__actions">
-              <a href="#" class="login-form__submit-link" type="submit">ورود</a>
-              <a href="#" class="login-form__register-link"
+              <a href="/" class="login-form__submit-link">ورود</a>
+              <a href="register/register.html" class="login-form__register-link"
                 >حساب کاربری ندارید؟ ثبت نام کنید!</a
               >
             </div>
@@ -61,5 +91,6 @@
         </div>
       </div>
     </section>
+    <script src="entry.js"></script>
   </body>
 </html>
