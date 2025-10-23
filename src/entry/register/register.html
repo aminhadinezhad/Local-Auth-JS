@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت نام</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <section class="section-register">
+      <div class="register container">
+        <div class="justify-content-center">
+          <div class="register-form">
+            <div class="register-form__header">
+              <h1 class="register-form__title">ثبت نام</h1>
+              <p class="register-form__subtitle">
+                برای ایجاد حساب کاربری، فرم زیر را تکمیل نمایید. تکمیل فیلدهای
+                ستاره‌دار (*) الزامی است.
+              </p>
+            </div>
+            <form action="/src/" method="GET" class="register-form__form">
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="name-input" class="">نام و نام خانوادگی</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="name-input"
+                    name="name"
+                    dir="rtl"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد نام الزامی است.</p>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="national-id-input" class="">کد ملی</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="number"
+                    id="national-id-input"
+                    name="national-id"
+                    dir="ltr"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد کد ملی الزامی است.</p>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="mobile-number-input" class=""
+                      >شماره موبایل</label
+                    >
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="number"
+                    id="mobile-number-input"
+                    name="mobile-number"
+                    dir="ltr"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد شماره همراه الزامی است.</p>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="landline-number-input" class=""
+                      >شماره ثابت</label
+                    >
+                  </div>
+                  <input
+                    type="number"
+                    id="landline-number-input"
+                    name="landline-number"
+                    dir="ltr"
+                    class="register-form__input"
+                  />
+                </div>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="email-input" class="">پست الکترونیکی</label>
+                  </div>
+                  <input
+                    type="email"
+                    id="email-input"
+                    name="email"
+                    dir="ltr"
+                    class="register-form__input"
+                  />
+                </div>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="postal-code-input" class="">کد پستی</label>
+                  </div>
+                  <input
+                    type="number"
+                    id="postal-code-input"
+                    name="postal-code"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    inputmode="numeric"
+                    dir="ltr"
+                    class="register-form__input"
+                  />
+                </div>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="address-input" class="">نشانی</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="address-input"
+                    name="address"
+                    dir="rtl"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد نشانی الزامی است.</p>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="password-input" class="">رمز عبور</label>
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="password"
+                    id="password-input"
+                    name="password"
+                    dir="ltr"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد گذرواژه الزامی است.</p>
+              </div>
+
+              <div class="register-form__group">
+                <div class="register-form__box">
+                  <div class="register-form__label">
+                    <label for="confirm-password-input" class=""
+                      >تکرار رمز عبور</label
+                    >
+                    <span class="required">*</span>
+                  </div>
+                  <input
+                    type="password"
+                    id="confirm-password-input"
+                    name="confirm-password"
+                    dir="ltr"
+                    required
+                    class="register-form__input"
+                  />
+                  <svg
+                    class="warning-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="#000000"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="warning-message">فیلد تکرار گذرواژه الزامی است.</p>
+              </div>
+              <div class="register-form__actions">
+                <a href="" class="register-form__submit-link">ثبت نام</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="register.js"></script>
+  </body>
+</html>

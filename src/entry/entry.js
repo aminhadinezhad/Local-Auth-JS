@@ -7,7 +7,6 @@ const warningMessages = document.querySelectorAll('.warning-message');
 const warningIcons = document.querySelectorAll('.warning-icon');
 
 warningIcons.forEach(message => message.classList.add('hidden'));
-
 warningMessages.forEach(icon => icon.classList.add('hidden'));
 
 loginBtn.addEventListener('click', function (e) {
