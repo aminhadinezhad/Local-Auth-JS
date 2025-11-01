@@ -11,12 +11,48 @@ const registerForm = document.querySelector('.register-form__form');
 const registerBtn = document.querySelector('.register-form__submit-link');
 const registerInputs = document.querySelectorAll('.register-form__input');
 const warningMessages = document.querySelectorAll('.warning-message');
+const warningMessageMismatch = document.querySelector(
+  '.warning-message--mismatch'
+);
 const warningIcons = document.querySelectorAll('.warning-icon');
+const storedAccountsJSON = localStorage.getItem('registeredAccounts');
+const accounts = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
+console.log(`تعداد ${accounts.length} کاربر قبلی بارگیری شد.`);
+console.log(storedAccountsJSON);
+
+class User {
+  constructor(
+    name,
+    nationalId,
+    mobileNumber,
+    landlineNumber,
+    email,
+    postalCode,
+    address,
+    password
+  ) {
+    this.name = name;
+    this.nationalId = nationalId;
+    this.mobileNumber = mobileNumber;
+    this.landlineNumber = landlineNumber;
+    this.email = email;
+    this.postalCode = postalCode;
+    this.address = address;
+    this.password = password;
+  }
+}
 
 warningIcons.forEach(message => message.classList.add('hidden'));
 warningMessages.forEach(icon => icon.classList.add('hidden'));
+warningMessageMismatch.classList.add('hidden');
 
-registerBtn.addEventListener('click', function (e) {
+// clear fields function
+const clearFields = function () {
+  registerInputs.forEach(input => (input.value = ''));
+};
+
+// register operation function
+const handleRegistration = function (e) {
   e.preventDefault();
 
   const isNameEmpty = name.value === '';
@@ -25,6 +61,7 @@ registerBtn.addEventListener('click', function (e) {
   const isAddressEmpty = address.value === '';
   const isPasswordEmpty = password.value === '';
   const isConfirmPasswordEmpty = confirmPassword.value === '';
+  const isPasswordMismatch = password.value !== confirmPassword.value;
   let isValid = true;
 
   registerInputs.forEach(input => {
@@ -34,6 +71,7 @@ registerBtn.addEventListener('click', function (e) {
 
   warningIcons.forEach(message => message.classList.add('hidden'));
   warningMessages.forEach(icon => icon.classList.add('hidden'));
+  warningMessageMismatch.classList.add('hidden');
 
   if (isNameEmpty) {
     registerInputs[0].classList.add('left-padding');
@@ -83,7 +121,53 @@ registerBtn.addEventListener('click', function (e) {
     isValid = false;
   }
 
-  if (isValid) {
-    registerForm.submit();
+  if (isPasswordMismatch && isConfirmPasswordEmpty === false) {
+    registerInputs[8].classList.add('left-padding');
+    registerInputs[8].classList.add('warning-input');
+    warningIcons[5].classList.remove('hidden');
+    warningMessageMismatch.classList.remove('hidden');
+    isValid = false;
   }
-});
+
+  if (isValid) {
+    const user = new User(
+      `${name.value}`,
+      `${nationalId.value}`,
+      `${mobileNumber.value}`,
+      `${landlineNumber.value}`,
+      `${email.value}`,
+      `${postalCode.value}`,
+      `${address.value}`,
+      `${password.value}`
+    );
+
+    accounts.push(user);
+    // NOTE: تبدیل آرایه به رشته json
+    const accountsJSON = JSON.stringify(accounts);
+    // NOTE: ذخیره رشته در localStorage
+    localStorage.setItem('registeredAccounts', accountsJSON);
+    alert('✅ثبت نام شما با موفقیت انجام شد');
+
+    // clear register form fields
+    clearFields();
+  }
+};
+
+registerBtn.addEventListener('click', handleRegistration);
+
+const accountsArray = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
+console.log(accountsArray[0]);
+console.log(accountsArray[0].name);
+console.log(accountsArray[0].mobileNumber);
+
+console.log(accountsArray[1]);
+console.log(accountsArray[1].name);
+console.log(accountsArray[1].mobileNumber);
+
+console.log(accountsArray[2]);
+console.log(accountsArray[2].name);
+console.log(accountsArray[2].mobileNumber);
+
+console.log(accountsArray[3]);
+console.log(accountsArray[3].name);
+console.log(accountsArray[3].mobileNumber);

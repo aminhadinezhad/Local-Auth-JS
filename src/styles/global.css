@@ -39,6 +39,12 @@ body {
   color: red;
 }
 
+.warning-message--mismatch {
+  font-size: 1.2rem;
+  text-align: center;
+  color: red;
+}
+
 .warning-icon {
   position: absolute;
   width: 2rem;
@@ -50,7 +56,7 @@ body {
 }
 
 .left-padding {
-  padding: 2.4rem 1.2rem 1rem 3.6rem !important;
+  padding: 2.4rem 1.2rem 1rem 3.8rem !important;
 }
 
 .warning-input {
