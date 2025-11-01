@@ -15,14 +15,14 @@
             <div class="login-form__header">
               <h1 class="login-form__title">ورود به حساب کاربری</h1>
               <p class="login-form__subtitle">
-                نام کاربری و رمز عبور خود را وارد کنید!
+                شماره موبایل و رمز عبور خود را وارد کنید!
               </p>
             </div>
             <form action="/src/" method="GET" class="login-form__form">
               <div class="login-form__group">
                 <div class="login-form__box">
                   <div class="login-form__label">
-                    <label for="username-input" class="">نام کاربری</label>
+                    <label for="username-input" class="">موبایل</label>
                     <span class="required">*</span>
                   </div>
                   <input
@@ -47,6 +47,7 @@
                   </svg>
                 </div>
                 <p class="warning-message">فیلد نام کاربری الزامی است.</p>
+                <p class="warning-message--user-not-exist">این کاربر در سیستم ثبت نشده است!</p>
               </div>
 
               <div class="login-form__group">
@@ -77,6 +78,7 @@
                   </svg>
                 </div>
                 <p class="warning-message">فیلد گذرواژه الزامی است.</p>
+                <p class="warning-message--wrong-pass">رمز عبور نادرست است!</p>
               </div>
             </form>
 

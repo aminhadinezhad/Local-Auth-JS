@@ -45,6 +45,18 @@ body {
   color: red;
 }
 
+.warning-message--user-not-exist {
+  font-size: 1.2rem;
+  text-align: center;
+  color: red;
+}
+
+.warning-message--wrong-pass {
+  font-size: 1.2rem;
+  text-align: center;
+  color: red;
+}
+
 .warning-icon {
   position: absolute;
   width: 2rem;
