@@ -56,7 +56,9 @@ loginBtn.addEventListener('click', function (e) {
 
     if (userAcc) {
       if (userAcc && userAcc.password === password.value) {
-        alert(`${userAcc.name} گرامی شما با موفقیت وارد حساب کاربری خود شدید✅`)
+        alert(
+          `${userAcc.name} گرامی شما با موفقیت وارد حساب کاربری خود شدید✅`
+        );
         window.location.href = '../index.html';
       } else if (
         userAcc &&
