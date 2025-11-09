@@ -1,1 +1,1 @@
-www.local-auth-js.netlify.app
+https://local-auth-js.netlify.app/
