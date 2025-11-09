@@ -82,3 +82,20 @@ body {
 .hidden {
   display: none;
 }
+
+@media (max-width: 36em) {
+  .warning-message {
+    font-size: 1.1rem;
+  }
+
+  .warning-message--mismatch {
+    font-size: 1.1rem;
+
+  .warning-message--user-not-exist {
+    font-size: 1.1rem;
+  }
+
+  .warning-message--wrong-pass {
+    font-size: 1.1rem;
+  }
+}

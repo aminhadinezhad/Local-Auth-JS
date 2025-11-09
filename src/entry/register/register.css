@@ -85,3 +85,35 @@
   background-color: #146c43;
   border-color: #146c43;
 }
+
+@media (max-width: 65em) {
+  .register-form {
+    width: 55%;
+  }
+}
+
+@media (max-width: 51em) {
+  .register-form {
+    width: 70%;
+  }
+
+  .register-form__input {
+    padding: 2.2rem 1rem 0.8rem 1em;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 36em) {
+  .register-form {
+    width: 90%;
+  }
+
+  .register-form__title {
+    font-size: 2.2rem;
+  }
+
+  .register-form__subtitle {
+    font-size: 1.4rem;
+  }
+
+}

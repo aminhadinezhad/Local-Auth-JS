@@ -91,6 +91,7 @@
   text-decoration: none;
   color: #fff;
   border-radius: 0.5rem;
+  font-size: 1.6rem;
   padding: 1rem 1.2rem;
   transition: 200ms;
 }
@@ -116,4 +117,67 @@
   border-color: #0a53be;
 }
 
+/* --- Media Queries --- */
+@media (max-width: 69em) {
+  .login-form__title {
+    font-size: 2rem;
+  }
 
+  .login-form__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .login-form__input {
+    padding: 2.2rem 1rem 0.8rem 1em;
+    font-size: 1.4rem;
+  }
+
+  .login-form__forgot-link:link,
+  .login-form__forgot-link:visited {
+    font-size: 1.2rem;
+  }
+
+  .login-form__submit-link:link,
+  .login-form__submit-link:visited,
+  .login-form__register-link:link,
+  .login-form__register-link:visited {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 46em) {
+  .login-form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 32em) {
+  .login-form {
+    width: 80%;
+  }
+
+  .login-form__input {
+    padding: 2rem 0.8rem 0.6rem 0.8em;
+    font-size: 1.4rem;
+  }
+
+  .login-form__forgot-link:link,
+  .login-form__forgot-link:visited {
+    font-size: 1.2rem;
+  }
+
+  .login-form__submit-link:link,
+  .login-form__submit-link:visited,
+  .login-form__register-link:link,
+  .login-form__register-link:visited {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 24em) {
+  .login-form {
+    width: 95%;
+  }
+}
