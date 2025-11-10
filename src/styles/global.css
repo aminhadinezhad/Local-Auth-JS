@@ -84,6 +84,16 @@ body {
 }
 
 @media (max-width: 36em) {
+  .warning-icon {
+    width: 1.9rem;
+    height: 1.9rem;
+    left: 0.9rem;
+  }
+
+  .left-padding {
+    padding: 2.3rem 1.1rem 0.9rem 3.7rem !important;
+  }
+
   .warning-message {
     font-size: 1.1rem;
   }
@@ -91,7 +101,7 @@ body {
   .warning-message--mismatch {
     font-size: 1.1rem;
   }
-  
+
   .warning-message--user-not-exist {
     font-size: 1.1rem;
   }

@@ -142,7 +142,7 @@ const handleRegistration = function (e) {
     const accountsJSON = JSON.stringify(accounts);
     // NOTE: ذخیره رشته در localStorage
     localStorage.setItem('registeredAccounts', accountsJSON);
-    alert('✅ثبت نام شما با موفقیت انجام شد');
+    alert('ثبت نام شما با موفقیت انجام شد✅');
 
     window.location.href = '../entry.html';
 
