@@ -118,7 +118,7 @@
 
   .register-form__submit-link:link,
   .register-form__submit-link:visited {
-    padding: 0.9rem 1.1rem;
-    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
   }
 }
