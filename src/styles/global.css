@@ -90,7 +90,8 @@ body {
 
   .warning-message--mismatch {
     font-size: 1.1rem;
-
+  }
+  
   .warning-message--user-not-exist {
     font-size: 1.1rem;
   }
