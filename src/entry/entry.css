@@ -120,11 +120,11 @@
 /* --- Media Queries --- */
 @media (max-width: 69em) {
   .login-form__title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .login-form__subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .login-form__input {
@@ -154,7 +154,15 @@
 
 @media (max-width: 32em) {
   .login-form {
-    width: 80%;
+    width: 90%;
+  }
+
+  .register-form__title {
+    font-size: 2.2rem;
+  }
+
+  .register-form__subtitle {
+    font-size: 1.4rem;
   }
 
   .login-form__input {
@@ -173,11 +181,5 @@
   .login-form__register-link:visited {
     padding: 0.8rem 1rem;
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 24em) {
-  .login-form {
-    width: 95%;
   }
 }

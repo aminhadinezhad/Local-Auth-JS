@@ -116,6 +116,11 @@
     font-size: 1.4rem;
   }
 
+  .login-form__input {
+    padding: 2rem 0.8rem 0.6rem 0.8em;
+    font-size: 1.4rem;
+  }
+
   .register-form__submit-link:link,
   .register-form__submit-link:visited {
     padding: 0.8rem 1rem;
