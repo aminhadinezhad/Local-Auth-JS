@@ -119,6 +119,10 @@
 
 /* --- Media Queries --- */
 @media (max-width: 69em) {
+  .register-form {
+    width: 55%;
+  }
+
   .login-form__title {
     font-size: 2.2rem;
   }
@@ -146,13 +150,13 @@
   }
 }
 
-@media (max-width: 46em) {
+@media (max-width: 51em) {
   .login-form {
-    width: 60%;
+    width: 70%;
   }
 }
 
-@media (max-width: 32em) {
+@media (max-width: 36em) {
   .login-form {
     width: 90%;
   }
