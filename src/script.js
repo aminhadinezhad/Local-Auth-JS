@@ -1,7 +1,7 @@
 'use strict';
 
 // (function () {
-const link = document.querySelector('.user-auth-link');
+// const link = document.querySelector('.user-auth-link');
 //   let fillEl = null;
 
 //   const initialRadius = 10;
@@ -87,7 +87,7 @@ const link = document.querySelector('.user-auth-link');
 // })();
 
 // گزارش کاربران
-const storedAccountsJSON = localStorage.getItem('registeredAccounts');
+const storedAccountsJSON = localStorage.getItem('accounts');
 const accounts = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
 console.log(`تعداد ${accounts.length} کاربر ثبت شده است. `);
 console.log(storedAccountsJSON);

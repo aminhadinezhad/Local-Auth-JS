@@ -9,7 +9,7 @@ const warningUserNotExist = document.querySelector(
 );
 const warningWrongPass = document.querySelector('.warning-message--wrong-pass');
 const warningIcons = document.querySelectorAll('.warning-icon');
-const storedAccountsJSON = localStorage.getItem('registeredAccounts');
+const storedAccountsJSON = localStorage.getItem('accounts');
 const accountsArray = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
 
 warningIcons.forEach(message => message.classList.add('hidden'));

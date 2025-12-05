@@ -13,7 +13,7 @@ const registerInputs = document.querySelectorAll('.register-form__input');
 const warningMessages = document.querySelectorAll('.warning-message');
 const warningMismatch = document.querySelector('.warning-message--mismatch');
 const warningIcons = document.querySelectorAll('.warning-icon');
-const storedAccountsJSON = localStorage.getItem('registeredAccounts');
+const storedAccountsJSON = localStorage.getItem('accounts');
 const accounts = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
 
 class User {
