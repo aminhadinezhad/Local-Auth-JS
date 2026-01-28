@@ -1,5 +1,4 @@
 'use strict';
-
 // (function () {
 // const link = document.querySelector('.user-auth-link');
 //   let fillEl = null;
@@ -86,8 +85,15 @@
 //   link.addEventListener('pointerdown', onPointerDown);
 // })();
 
+const authLinkText = document.querySelector('.auth-link-text');
+
 // گزارش کاربران
 const storedAccountsJSON = localStorage.getItem('accounts');
 const accounts = storedAccountsJSON ? JSON.parse(storedAccountsJSON) : [];
 console.log(`تعداد ${accounts.length} کاربر ثبت شده است. `);
 console.log(storedAccountsJSON);
+
+const userName = localStorage.getItem('user');
+authLinkText.textContent = userName;
+
+if (!storedAccountsJSON) authLinkText.textContent = 'ورود / ثبت نام';

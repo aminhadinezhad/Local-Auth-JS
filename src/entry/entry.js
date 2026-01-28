@@ -59,6 +59,7 @@ loginBtn.addEventListener('click', function (e) {
         alert(
           `${userAcc.name} گرامی شما با موفقیت وارد حساب کاربری خود شدید✅`
         );
+        localStorage.setItem('user', userAcc.name);
         window.location.href = '../index.html';
       } else if (
         userAcc &&
